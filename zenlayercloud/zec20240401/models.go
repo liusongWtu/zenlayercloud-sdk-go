@@ -2333,21 +2333,20 @@ type BatchAttachEipLanIpResponse struct {
 	} `json:"response"`
 }
 
-
 type AssociateEipAddressRequest struct {
-    *common.BaseRequest
+	*common.BaseRequest
 
-    LoadBalancerId string   `json:"loadBalancerId,omitempty"`
+	LoadBalancerId string `json:"loadBalancerId,omitempty"`
 
-    EipIds         []string `json:"eipIds,omitempty"`
+	EipIds []string `json:"eipIds,omitempty"`
 }
 
 type AssociateEipAddressResponse struct {
-    *common.BaseResponse
+	*common.BaseResponse
 
-    RequestId string `json:"requestId,omitempty"`
+	RequestId string `json:"requestId,omitempty"`
 
-    Response *AssociateEipAddressResponseParams `json:"response"`
+	Response *AssociateEipAddressResponseParams `json:"response"`
 }
 
 type AssociateEipAddressResponseParams struct {
@@ -2356,7 +2355,7 @@ type AssociateEipAddressResponseParams struct {
 	FailedEipIds []string `json:"failedEipIds,omitempty"`
 }
 
->>>>>>> origin/zec
+// >>>>>>> origin/zec
 type DetachEipLanIpRequest struct {
 	*common.BaseRequest
 
@@ -2374,23 +2373,23 @@ type DetachEipLanIpResponse struct {
 }
 
 type UnassociateEipAddressRequest struct {
-    *common.BaseRequest
+	*common.BaseRequest
 
-    EipIds []string `json:"eipIds,omitempty"`  // 需要解绑的EIP ID列表
+	EipIds []string `json:"eipIds,omitempty"` // 需要解绑的EIP ID列表
 }
 
 type UnassociateEipAddressResponse struct {
-    *common.BaseResponse
+	*common.BaseResponse
 
-    RequestId string                                 `json:"requestId,omitempty"`
+	RequestId string `json:"requestId,omitempty"`
 
-    Response  *UnassociateEipAddressResponseParams   `json:"response"`
+	Response *UnassociateEipAddressResponseParams `json:"response"`
 }
 
 type UnassociateEipAddressResponseParams struct {
-    RequestId     string   `json:"requestId,omitempty"`
+	RequestId string `json:"requestId,omitempty"`
 
-    FailedEipIds  []string `json:"failedEipIds,omitempty"`  // 解绑失败的EIP ID列表
+	FailedEipIds []string `json:"failedEipIds,omitempty"` // 解绑失败的EIP ID列表
 }
 
 type ConfigEipEgressIpRequest struct {
